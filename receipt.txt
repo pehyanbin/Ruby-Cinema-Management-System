@@ -1,0 +1,6 @@
+===================== Receipt =====================
+Name : pyb
+Age : 19
+Gender : male
+
+Seat : [ 2 , 2 ]
