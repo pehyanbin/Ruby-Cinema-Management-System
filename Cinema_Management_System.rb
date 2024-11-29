@@ -107,7 +107,7 @@ end
 
 
 def print_output(info, seat, movie_names)
-  if (seat.session == -99)
+  if (seat.session != -99)
     puts "Name : #{info.name}"
     puts "Age : #{info.age}"
     puts "Gender : #{info.gender}"
@@ -289,7 +289,7 @@ def configure_seats(seats, seatConfig, movie_names)
   change_seat_config = gets.chomp.to_i()
 
   if (change_seat_config == 1)
-    seat_config()
+    seatConfig = seat_config() #return function but not using variable to call it. ( Previously using it like a void function )
     movie_lists_config(seatConfig.session, movie_names)
   end 
 

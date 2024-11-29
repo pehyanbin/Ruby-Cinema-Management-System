@@ -1,6 +1,8 @@
 ===================== Receipt =====================
-Name : pyb
+Name : pehyanbin
 Age : 19
-Gender : male
+Gender : Male
 
-Seat : [ 2 , 2 ]
+Session : 1 => movie1
+
+Seat : [ 1 , 1 ]
