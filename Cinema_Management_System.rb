@@ -285,7 +285,10 @@ end
 
 def configure_seats(seats, seatConfig, movie_names)
 
-  if (seatConfig.session.nil? && seatConfig.row.nil? && seatConfig.column.nil?)
+  puts "Do you want to change the seat configuration ? ( 1 = Yes; any number = No )"
+  change_seat_config = gets.chomp.to_i()
+
+  if (change_seat_config == 1)
     seat_config()
     movie_lists_config(seatConfig.session, movie_names)
   end 
