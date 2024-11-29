@@ -10,7 +10,7 @@ class Info
       @column = column 
   end 
 end 
-
+#records
 
 
 
@@ -26,13 +26,13 @@ class Seat
       @column = column
   end 
 end 
+#records
 
 
 
 
 
-
-
+#to get customer's order
 def get_input(session, movie_names)
   puts "Name : "
   name = gets.chomp.to_s()
@@ -64,7 +64,7 @@ end
 
 
 
-
+# process customer order ( booking the seat )
 def seat(seats, info, seatConfig)
   
   session = info.session
@@ -106,6 +106,7 @@ end
 
 
 
+#print customer's successfull booking
 def print_output(info, seat, movie_names)
   if (seat.session != -99)
     puts "Name : #{info.name}"
@@ -125,7 +126,7 @@ end
 
 
 
-
+#ask for seat configuration details ( for array creation / config creation )
 def seat_config()
   puts "Seat configuration settings \n======================================================"
 
@@ -153,7 +154,7 @@ end
 
 
 
-
+#movie name configuration for sessions 
 def movie_lists_config(sessions, movie_names)
   i = 1
   
@@ -170,7 +171,7 @@ end
 
 
 
-
+#display movie name of each session
 def movie_name_lists(sessions, movie_names)
   i = 1
 
@@ -191,7 +192,7 @@ end
 
 
 
-
+# show seat configuration and status 
 def show_seat_config(seats, seatConfig, movie_names)
   puts "\n\nSeats configurations \n========================================================="
 
@@ -227,7 +228,7 @@ end
 
 
 
-
+# process the seat configuration from the data captured in seat_config function
 def initialize_seat_config(seats, seatConfig)
 
   s = 1 
@@ -258,7 +259,7 @@ end
 
 
 
-
+# aggregation of several functions for seat booking
 def seat_booking_part(seats, seatConfig, session, movie_names)
   while true 
     data = get_input(session, movie_names)
@@ -282,7 +283,7 @@ end
 
 
 
-
+# for configuring seat when program is running ( not in the beginning )
 def configure_seats(seats, seatConfig, movie_names)
 
   puts "Do you want to change the seat configuration ? ( 1 = Yes; any number = No )"
@@ -303,7 +304,7 @@ end
 
 
 
-
+# enumeration
 module Operation 
   CONFIG, BOOKING, SHOW_CONFIG = *1..3
 end 
@@ -312,7 +313,7 @@ end
 
 
 
-
+# for exiting the program
 def break_mechanism()
   puts "Do you want to EXIT ? ( 1 = Exit; any number = Continue)"
   continue = gets.chomp.to_i
@@ -325,7 +326,7 @@ end
 
 
 
-
+# three modes of the program ( function decision )
 def operation_choice(seats, seatConfig, session, movie_names)
   puts "Choose operation : \n(1) CHANGE CONFIG\n(2) BOOKING\n(3) SHOW SEAT CONFIG"
   operation = gets.chomp.to_i
@@ -353,7 +354,7 @@ end
 
 
 
-
+# generate receipt
 def print_receipt(info, seat, movie_names)
   puts "Print receipt ? ( 1 for print receipt, any number to decline )"
 
@@ -388,7 +389,7 @@ end
 
 
 
-
+# main function 
 def main() 
   puts "|----------------------------------------------------------------------------------------------------------|"
   puts "|======================================= Cinema Management Software =======================================|"
